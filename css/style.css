@@ -99,7 +99,7 @@ ul {
   align-items: center;
 }
 
-.headrer-logo {
+.header-logo {
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -109,12 +109,12 @@ ul {
   margin-right: 93px;
 }
 
-.headrer-list {
+.header-list {
   display: flex;
   gap: 50px;
 }
 
-.headrer-nav {
+.header-nav {
   margin-right: auto;
 }
 
