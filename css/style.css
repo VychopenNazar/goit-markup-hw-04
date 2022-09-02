@@ -5,12 +5,14 @@
   --title-clr: #212121;
   --txt-clr: #757575;
   --second-txt-color: #000000;
+  --social-link-clr: #afb1b8;
 
   /* Кольори фону */
 
   --main-bg-clr: #ffffff;
   --second-bg-clr: #2f303a;
   --btn-bg-clr: #f5f4fa;
+
   /* Шрифти */
 
   --main-font: 'Roboto', sans-serif;
@@ -140,6 +142,9 @@ ul {
 }
 
 .contact-mail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -147,7 +152,15 @@ ul {
   color: var(--txt-clr);
 }
 
+.contact-logo {
+  fill: var(--txt-clr);
+  cursor: pointer;
+}
+
 .contact-tel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -165,6 +178,11 @@ ul {
   color: var(--main-clr);
 }
 
+.contact-logo:hover,
+.contact-logo:focus {
+  fill: currentColor;
+}
+
 /* футер */
 
 .footer {
@@ -179,20 +197,19 @@ ul {
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
   color: var(--main-bg-clr);
+  margin-bottom: 20px;
+}
+
+.footer-container {
+  display: flex;
 }
 
 .media-list {
   font-style: normal;
-}
-
-.footer-logo {
-  margin-bottom: 20px;
-}
-
-.media-list {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  margin-right: 70px;
 }
 
 .media-link {
@@ -226,12 +243,53 @@ ul {
   color: var(--main-clr);
 }
 
+.socials-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.socials-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-bg-clr);
+  margin-bottom: 20px;
+}
+
+.footer-socials-list {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  fill: var(--main-bg-clr);
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--main-clr);
+}
+
 /* основна сторінка */
 
 /* Шапка */
 
 .hero {
-  background: var(--second-bg-clr);
+  background: rgba(47, 48, 58, 0.4);
+  background-image: url(/images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   padding: 200px 0;
   text-align: center;
 }
@@ -279,6 +337,13 @@ ul {
 .about-list {
   display: flex;
   gap: 30px;
+}
+
+.about-icon {
+  margin-bottom: 30px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--btn-bg-clr);
+  padding: 25px 100px;
 }
 
 .list-title {
@@ -362,7 +427,73 @@ ul {
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
   color: var(--txt-clr);
+  margin-bottom: 16px;
+}
+
+.socials-list {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
   padding-bottom: 30px;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+
+  fill: var(--social-link-clr);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  background-color: var(--main-clr);
+  fill: var(--main-bg-clr);
+}
+
+/* Клієнти */
+
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-clr);
+  margin-bottom: 50px;
+}
+
+.clients-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  border: solid 1px var(--social-link-clr);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.clients-logo {
+  width: 106px;
+  height: 60px;
+}
+
+.clients-list {
+  display: flex;
+  gap: 30px;
+  flex-basis: calc((100% - 30px) / 6);
+  fill: var(--social-link-clr);
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  fill: var(--main-clr);
+  border-color: var(--main-clr);
 }
 
 /* Кнопки навігації */
@@ -391,6 +522,7 @@ ul {
 .btn:focus {
   background: var(--main-clr);
   color: var(--main-bg-clr);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* Головне портфоліо */
@@ -404,6 +536,11 @@ ul {
 .portfolio-item {
   width: calc((100% - 60px) / 3);
   border: 1px solid #eeeeee;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .portfolio-name {
